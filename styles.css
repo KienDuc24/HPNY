@@ -499,6 +499,10 @@ button.truck-button{
   border: 4px solid rgb(216, 216, 36);
 }
 
+::placeholder{
+  font-size: 2vh;
+}
+
 i{
   margin-top: 7vh;
   margin-left: 3vw;
@@ -514,6 +518,3 @@ a.truck-button{
   cursor: var(--cursor);
 }
 
-.text{
-  font-size: 1vh;
-}
