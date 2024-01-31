@@ -500,12 +500,12 @@ button.truck-button{
 }
 
 ::placeholder{
-  font-size: 2vh;
+  font-size: 18px;
 }
 
 i{
-  margin-top: 7vh;
-  margin-left: 3vw;
+  margin-top: 55px;
+  margin-left: 55px;
 }
 
 :root {
