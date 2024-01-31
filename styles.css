@@ -518,3 +518,9 @@ a.truck-button{
   cursor: var(--cursor);
 }
 
+.note{
+  padding: 0px;
+  height: 30px;
+  font-size: 24px;
+  font-style: italic;
+}
