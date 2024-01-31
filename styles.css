@@ -514,3 +514,6 @@ a.truck-button{
   cursor: var(--cursor);
 }
 
+.text{
+  font-size: 1vh;
+}
