@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+	color: #ffeba7;
+	background-image: url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a:hover {
+	text-decoration: none;
+}
+.link {
+  color: #ffeba7;
+}
+.link:hover {
+  color: #c4c3ca;
+}
+p {
+  font-weight: 500;
+  font-size: 14px;
+}
+h4 {
+  font-weight: 600;
+}
+h6 span{
+  padding: 0 20px;
+  font-weight: 700;
+}
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+  
+}
+.full-height{
+  min-height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+display: none;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #020305;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+.card-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
+}
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 46, 56, 0);;
+  background-image: url('/img/pattern_japanese-pattern-2_1_2_0-0_0_1__ffffff00_000000.png');
+  position: absolute;
+  border-radius: 6px;
+  -webkit-transform-style: preserve-3d;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+#login{
+  background-color: rgba(43, 46, 56, 0);
+  color:#ffeba7;
+}
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: black;
+  background-color: rgba(43, 46, 56, 0);
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.form-style::placeholder {
+  /* Đặt màu chữ là màu đen đậm */
+  color:#ffeba7;
+  opacity: 1; /* Đảm bảo màu chữ được hiển thị đầy đủ */
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  -webkit-transition: all 200ms linear;
+   transition: all 200ms linear;
+}
+.btn{  
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffeba7;
+  color: #000000;
+}
+.btn:hover{  
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+
+
+		
+.error{
+  color: rgb(214, 5, 5);
+  font-size: large;
+  font-weight: 700;
+  background-color: transparent;
+
+}
+
+p.error{
+  padding: 5px 10px;
+  margin: 0px 0px 0px 8px;
+  display: none;
+}
+
+
+/* TRUCK */
+.truck-button {
+  --color: #fff;
+  --background: #2b3044;
+  --tick: #16bf78;
+  --base: #0d0f18;
+  --wheel: #2b3044;
+  --wheel-inner: #646b8c;
+  --wheel-dot: #fff;
+  --back: #6d58ff;
+  --back-inner: #362a89;
+  --back-inner-shadow: #2d246b;
+  --front: #a6accd;
+  --front-shadow: #535a79;
+  --front-light: #fff8b1;
+  --window: #2b3044;
+  --window-shadow: #404660;
+  --street: #646b8c;
+  --street-fill: #404660;
+  --box: #dcb97a;
+  --box-shadow: #b89b66;
+  padding: 12px 0;
+  width: 172px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border: none;
+  outline: none;
+  color: var(--color);
+  background: var(--background);
+  border-radius: var(--br, 5px);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) translateZ(0);
+  transition: transform 0.5s, border-radius 0.3s linear var(--br-d, 0s);
+}
+.truck-button:before, .truck-button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  display: block;
+  background: var(--b, var(--street));
+  transform-origin: 0 100%;
+  transform: rotateX(90deg) scaleX(var(--sy, 1));
+}
+.truck-button:after {
+  --sy: var(--progress, 0);
+  --b: var(--street-fill);
+}
+.truck-button .default, .truck-button .success {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: var(--o, 1);
+  transition: opacity 0.3s;
+}
+.truck-button .success {
+  --o: 0;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+}
+.truck-button .success svg {
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: top;
+  fill: none;
+  margin: 7px 0 0 4px;
+  stroke: var(--tick);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: var(--offset, 16px);
+  transition: stroke-dashoffset 0.4s ease 0.45s;
+}
+.truck-button .truck {
+  position: absolute;
+  width: 72px;
+  height: 28px;
+  transform: rotateX(90deg) translate3d(var(--truck-x, 4px), calc(var(--truck-y-n, -26) * 1px), 12px);
+}
+.truck-button .truck:before, .truck-button .truck:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: var(--l, 18px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: inset 0 0 0 2px var(--wheel), inset 0 0 0 4px var(--wheel-inner);
+  background: var(--wheel-dot);
+  transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+}
+.truck-button .truck:after {
+  --l: 54px;
+}
+.truck-button .truck .wheel, .truck-button .truck .wheel:before {
+  position: absolute;
+  bottom: var(--b, -6px);
+  left: var(--l, 6px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wheel);
+  transform: translateZ(0);
+}
+.truck-button .truck .wheel {
+  transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
+}
+.truck-button .truck .wheel:before {
+  --l: 35px;
+  --b: 0;
+  content: '';
+}
+.truck-button .truck .front, .truck-button .truck .back, .truck-button .truck .box {
+  position: absolute;
+}
+.truck-button .truck .back {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 47px;
+  height: 28px;
+  border-radius: 1px 1px 0 0;
+  background: linear-gradient(68deg, var(--back-inner) 0%, var(--back-inner) 22%, var(--back-inner-shadow) 22.1%, var(--back-inner-shadow) 100%);
+}
+.truck-button .truck .back:before, .truck-button .truck .back:after {
+  content: '';
+  position: absolute;
+}
+.truck-button .truck .back:before {
+  left: 11px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 0 1px 0 0;
+  background: var(--back);
+}
+.truck-button .truck .back:after {
+  border-radius: 1px;
+  width: 73px;
+  height: 2px;
+  left: -1px;
+  bottom: -2px;
+  background: var(--base);
+}
+.truck-button .truck .front {
+  left: 47px;
+  bottom: -1px;
+  height: 22px;
+  width: 24px;
+  -webkit-clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
+  background: linear-gradient(84deg, var(--front-shadow) 0%, var(--front-shadow) 10%, var(--front) 12%, var(--front) 100%);
+}
+.truck-button .truck .front:before, .truck-button .truck .front:after {
+  content: '';
+  position: absolute;
+}
+.truck-button .truck .front:before {
+  width: 7px;
+  height: 8px;
+  background: #fff;
+  left: 7px;
+  top: 2px;
+  -webkit-clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(59deg, var(--window) 0%, var(--window) 57%, var(--window-shadow) 55%, var(--window-shadow) 100%);
+}
+.truck-button .truck .front:after {
+  width: 3px;
+  height: 2px;
+  right: 0;
+  bottom: 3px;
+  background: var(--front-light);
+}
+.truck-button .truck .box {
+  width: 13px;
+  height: 13px;
+  right: 56px;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 1px;
+  overflow: hidden;
+  transform: translate(calc(var(--box-x, -24) * 1px), calc(var(--box-y, -6) * 1px)) scale(var(--box-s, 0.5));
+  opacity: var(--box-o, 0);
+  background: linear-gradient(68deg, var(--box) 0%, var(--box) 50%, var(--box-shadow) 50.2%, var(--box-shadow) 100%);
+  background-size: 250% 100%;
+  background-position-x: calc(var(--bx, 0) * 1%);
+}
+.truck-button .truck .box:before, .truck-button .truck .box:after {
+  content: '';
+  position: absolute;
+}
+.truck-button .truck .box:before {
+  content: '';
+  background: rgba(255, 255, 255, .2);
+  left: 0;
+  right: 0;
+  top: 6px;
+  height: 1px;
+}
+.truck-button .truck .box:after {
+  width: 6px;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  background: var(--back);
+  transform: translateX(calc(var(--hx, 0) * 1px));
+}
+.truck-button.animation {
+  --rx: -90deg;
+  --br: 0;
+}
+.truck-button.animation .default {
+  --o: 0;
+}
+.truck-button.animation.done {
+  --rx: 0deg;
+  --br: 5px;
+  --br-d: 0.2s;
+}
+.truck-button.animation.done .success {
+  --o: 1;
+  --offset: 0;
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+#success{
+  pointer-events: none;
+}
+
+#link1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(15%,-50%);
+  font-weight: 750;
+  text-shadow: 3px 0px black;
+  background-color: rgb(118, 15, 15);
+  border: 2px solid black;
+}
+
+#link2{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-15%,-50%);
+  font-weight: 750;
+  text-shadow: 3px 0px black;
+  background-color: rgb(118, 15, 15);
+  border: 2px solid black;
+}
+
+.truck-button:hover{
+  box-shadow: 5px 5px black;
+  color: white;
+  padding: 1%;
+}
+
+button.truck-button{
+  background-color: transparent;
+}
+
+#name_login{
+  color: white;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+.form-group{
+  padding: 50px;  
+  border-radius: 16px;  
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 4px solid rgb(216, 216, 36);
+}
+
+i{
+  margin-top: 7vh;
+  margin-left: 3vw;
+}
+
+:root {
+  --cursor:  url('data:image/x-icon;base64,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'), auto;
+}
+a.truck-button{
+  cursor: var(--cursor);
+}
+*{
+  cursor: var(--cursor);
+}
+
