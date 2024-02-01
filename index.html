@@ -90,12 +90,16 @@
 			document.getElementById("success").style.pointerEvents = "none";
 		  }
 
-		  
+		  document.getElementById("name_login").addEventListener("keydown", function(event) {
+			if (event.key === "Enter") {
+			  event.preventDefault(); // Ngăn chặn hành vi mặc định của nút Enter (ví dụ: gửi form)
+			  document.getElementById("success").click(); // Kích hoạt sự kiện click của nút button
+			}
+		  });
 
 		}
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
 	<script src="./truck.js"></script>
-	<script src="./main.js"></script>
 </body>
 </html>
