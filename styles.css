@@ -533,41 +533,41 @@ a.truck-button{
   .note{
     display: none;
   }
-  .large{
+  /* .large{
     display: none;
   }
   .small{
     display: block;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1025px) {
-  .large{
+  /* .large{
     display: block;
   }
   .small{
     display: none;
-  }
+  } */
 }
 
 @media only screen and (max-width:1024px) and (min-width: 641px) {
-  .large{
+  /* .large{
     display: block;
   }
   .small{
     display: none;
-  }
+  } */
 }
 
 @media only screen and (max-width: 800px) {
   .note{
     display: none;
   }
-  .large{
+  /* .large{
     display: none;
   }
   .small{
     display: block;
-  }
+  } */
 }
 
