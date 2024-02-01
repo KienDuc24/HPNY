@@ -461,8 +461,8 @@ html {
   transform: translate(15%,-50%);
   font-weight: 750;
   text-shadow: 3px 0px black;
-  background-color: rgb(118, 15, 15);
-  border: 2px solid black;
+  background-color: #9b141f;
+  border: 4px solid #f4c81a;
 }
 
 #link2{
@@ -472,14 +472,17 @@ html {
   transform: translate(-15%,-50%);
   font-weight: 750;
   text-shadow: 3px 0px black;
-  background-color: rgb(118, 15, 15);
-  border: 2px solid black;
+  background-color: #9b141f;
+  border: 4px solid #f4c81a;
 }
 
+a.truck-button{
+  border-radius: 32px;
+}
 .truck-button:hover{
   box-shadow: 5px 5px black;
   color: white;
-  padding: 1%;
+  padding: 2vh;
 }
 
 button.truck-button{
@@ -499,11 +502,7 @@ button.truck-button{
   border: 4px solid rgb(216, 216, 36);
 }
 
-::placeholder{
-  font-size: 18px;
-}
-
-i{
+.input-icon{
   margin-top: 55px;
   margin-left: 55px;
 }
@@ -521,28 +520,54 @@ a.truck-button{
 .note{
   padding: 0px;
   height: 30px;
-  font-size: 24px;
+  font-size: 26px;
   font-style: italic;
 }
 
-/* REPONSIVE */
+.fa-face-smile-wink {
+  margin-top: 20px;
+}
 
-  /* REPONSIVE */
-  @media only screen and (max-width: 640px) {
-    .note{
-      display: none;
-    }
+/* REPONSIVE */
+@media only screen and (max-width: 640px) {
+  .note{
+    display: none;
+  }
+  .large{
+    display: none;
+  }
+  .small{
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
+  .large{
+    display: block;
+  }
+  .small{
+    display: none;
+  }
 }
 
 @media only screen and (max-width:1024px) and (min-width: 641px) {
+  .large{
+    display: block;
+  }
+  .small{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-.note{
-  display: none;
-}
+  .note{
+    display: none;
+  }
+  .large{
+    display: none;
+  }
+  .small{
+    display: block;
+  }
 }
 
