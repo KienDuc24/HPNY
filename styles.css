@@ -528,46 +528,24 @@ a.truck-button{
   margin-top: 20px;
 }
 
+
 /* REPONSIVE */
-@media only screen and (max-width: 640px) {
-  .note{
-    display: none;
-  }
-  /* .large{
-    display: none;
-  }
-  .small{
-    display: block;
-  } */
-}
 
 @media only screen and (min-width: 1025px) {
-  /* .large{
-    display: block;
-  }
-  .small{
-    display: none;
-  } */
 }
 
 @media only screen and (max-width:1024px) and (min-width: 641px) {
-  /* .large{
-    display: block;
-  }
-  .small{
-    display: none;
-  } */
 }
 
 @media only screen and (max-width: 800px) {
   .note{
     display: none;
   }
-  /* .large{
+}
+
+@media only screen and (max-width: 640px) {
+  .note{
     display: none;
   }
-  .small{
-    display: block;
-  } */
 }
 
