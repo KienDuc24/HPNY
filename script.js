@@ -2319,7 +2319,7 @@ function add() {
 		  // Thay đổi đường dẫn của hình ảnh sau 5 giây
 		  setTimeout(() => {
 			img.src = run; // Đặt đường dẫn mới của hình ảnh
-		  }, 2200); // 3 giây = 3000 mili giây
+		  }, 2300); // 3 giây = 3000 mili giây
 		}
 		// Đợi 0.5 giây trước khi gọi hàm showImage()
 		setTimeout(showImage, 500); // 0.5 giây = 500 mili giây
