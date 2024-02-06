@@ -2290,9 +2290,55 @@ if (IS_HEADER) {
 				return Promise.reject(reason);
 			}
 		);
-	}, 3000);
+	}, 2000);
 }
 
-function home(){
-	window.location.href ="../Form/index.html";
+var add_count = 1;
+
+function add() {
+	if(add_count==6){
+		document.getElementById("add").style.display="none";
+		alert("Đã hết chỗ rồi! Không thêm được nữa.");
+	}
+	else{
+		const animationDiv = document.querySelector('.animation');
+		const img = document.createElement('img');
+		
+		var x = Math.floor(Math.random() * 2) +1;
+		var app = '././img/firework/app'+x+'.gif';
+		var run = '././img/firework/run'+x+'.gif';
+
+		
+		// Hàm để hiển thị hình ảnh và thay đổi đường dẫn sau một khoảng thời gian
+		function showImage() {
+		  // Hiển thị hình ảnh
+		  img.src = app;
+		  animationDiv.appendChild(img);
+		  add_count++;
+		
+		  // Thay đổi đường dẫn của hình ảnh sau 5 giây
+		  setTimeout(() => {
+			img.src = run; // Đặt đường dẫn mới của hình ảnh
+		  }, 2200); // 3 giây = 3000 mili giây
+		}
+		// Đợi 0.5 giây trước khi gọi hàm showImage()
+		setTimeout(showImage, 500); // 0.5 giây = 500 mili giây
+	}
+	
+
 }
+
+// Gán sự kiện click cho div.animation
+const animationDiv = document.querySelector('.animation');
+animationDiv.addEventListener('click', add);
+
+function appear() {
+	var elements = document.getElementsByClassName("menu_control");
+	for (var i = 0; i < elements.length; i++) {
+	  elements[i].style.display = "block";
+	}
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+	setTimeout(appear, 2000);
+  });

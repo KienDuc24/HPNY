@@ -498,7 +498,7 @@ button.truck-button{
 .form-group{
   padding: 50px;  
   border-radius: 16px;  
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   border: 4px solid rgb(216, 216, 36);
 }
 
@@ -528,6 +528,14 @@ a.truck-button{
   margin-top: 20px;
 }
 
+@font-face {
+    font-family: font;
+    src: url("./font/PlayfairDisplay-MediumItalic.ttf");
+  }
+
+.cre_text:hover{
+  font-size: 25px;
+}
 
 /* REPONSIVE */
 

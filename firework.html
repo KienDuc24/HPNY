@@ -15,10 +15,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <title>Firework</title>
 
-
+ 
 </head>
 <body>
-	<a href="./index.html"><img src="./img/home.gif" alt="home" class="home" title="Return home"></a>
+	<a href="./wish.html"><img src="./img/change.png" alt="change" class="menu_control flip-horizontal-bottom change" title="Wish/Firework"></a>
+	<a href="./index.html"><img src="./img/home.png" alt="home" class="menu_control flip-horizontal-bottom home" title="Return home"></a>
+	<img src="./img/add.png" alt="add" class="menu_control flip-horizontal-bottom add" title="Add" onclick="add()" id="add">
+
 <!-- partial:index.partial.html -->
 <!-- SVG Spritesheet -->
 <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
@@ -129,6 +132,9 @@
 			<button type="button" class="help-modal__close-btn">Close</button>
 		</div>
 	</div>
+</div>
+
+<div class="animation">
 </div>
 <!-- partial -->
   <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js'></script>
