@@ -2290,7 +2290,7 @@ if (IS_HEADER) {
 				return Promise.reject(reason);
 			}
 		);
-	}, 2000);
+	}, 3000);
 }
 
 var add_count = 1;
@@ -2304,7 +2304,7 @@ function add() {
 		const animationDiv = document.querySelector('.animation');
 		const img = document.createElement('img');
 		
-		var x = Math.floor(Math.random() * 2) +1;
+		var x = Math.floor(Math.random() * 10) +1;
 		var app = '././img/firework/app'+x+'.gif';
 		var run = '././img/firework/run'+x+'.gif';
 
@@ -2316,13 +2316,13 @@ function add() {
 		  animationDiv.appendChild(img);
 		  add_count++;
 		
-		  // Thay đổi đường dẫn của hình ảnh sau 5 giây
+		  // Thay đổi đường dẫn của hình ảnh sau 2.2 giây
 		  setTimeout(() => {
 			img.src = run; // Đặt đường dẫn mới của hình ảnh
-		  }, 2200); // 3 giây = 3000 mili giây
+		  }, 2200); // 2.2 giây = 2200 mili giây
 		}
 		// Đợi 0.5 giây trước khi gọi hàm showImage()
-		setTimeout(showImage, 500); // 0.5 giây = 500 mili giây
+		setTimeout(showImage, 0); // 0.5 giây = 500 mili giây
 	}
 	
 
@@ -2340,5 +2340,5 @@ function appear() {
   }
   
   document.addEventListener("DOMContentLoaded", function() {
-	setTimeout(appear, 2000);
+	setTimeout(appear, 2900);
   });
