@@ -59,15 +59,14 @@ document.getElementById("name_login").addEventListener("keydown", function(event
 var check_credits = 1;
 
 function Credits() {
-  if (check_credits % 2 == 0) {
-    document.getElementById("form").style.display = "block";
-    var creditsElements = document.getElementsByClassName("credits");
-    for (var i = 0; i < creditsElements.length; i++) {
-      creditsElements[i].style.display = "none";
-    }
-    check_credits++;
+  if (check_credits === 2) {
+    window.location.reload();
   } else {
     document.getElementById("form").style.display = "none";
+    var elements = document.querySelectorAll(".truck-button");
+    elements.forEach(function(element) {
+      element.remove();
+    });
     check_credits++;
 
     const credits = document.createElement('div');
